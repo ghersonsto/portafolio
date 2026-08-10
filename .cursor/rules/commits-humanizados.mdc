@@ -1,0 +1,34 @@
+---
+description: Commits claros y humanizados antes de subir una versión
+alwaysApply: true
+---
+
+# Commits humanizados antes de subir
+
+Antes de subir o publicar una versión (`push`, release, PR listo para merge), **siempre** crear un commit con mensaje entendible y humano.
+
+## Cómo escribir el mensaje
+
+- En **español**, tono natural (como se lo explicarías a un compañero).
+- Primera línea: **qué cambió y para qué**, no un listado técnico frío.
+- Opcional: 1–2 líneas más con el contexto útil.
+- Evitar mensajes genéricos (`update`, `fix`, `cambios`, `wip`) o solo en inglés técnico si el proyecto habla español.
+
+## Ejemplos
+
+```text
+❌ Document portfolio stack and architecture baseline.
+✅ Subo el portafolio y dejo documentado cómo está hecho
+
+❌ update files
+✅ Mejoro el formulario de contacto para validar el correo antes de enviarlo
+
+❌ fix
+✅ Corrijo el dark mode para que recuerde la preferencia al recargar
+```
+
+## Flujo
+
+1. Revisar qué cambió (`git status` / diff).
+2. Commit humanizado y entendible.
+3. Recién entonces subir la versión a GitHub.

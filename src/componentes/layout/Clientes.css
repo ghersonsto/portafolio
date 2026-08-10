@@ -1,0 +1,78 @@
+.clientes {
+  .banner-logos {
+    width: 100%;
+    overflow: hidden;
+    border-block: 1px solid var(--shade-2);
+    padding: 10px 0;
+    mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 10%,
+      #000 90%,
+      transparent
+    );
+
+    .dark & {
+      border-color: var(--shade-7);
+    }
+
+    .track {
+      display: flex;
+      width: max-content;
+      gap: 18px;
+      animation: moverLogos 28s linear infinite;
+
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+
+    .logo-item {
+      width: 190px;
+      height: 86px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border: 1px solid var(--shade-2);
+      border-radius: 8px;
+      background: #fff;
+
+      img {
+        max-width: 128px;
+        max-height: 60px;
+        object-fit: contain;
+      }
+
+      .dark & {
+        background: var(--shade-8);
+        border-color: var(--shade-7);
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    & {
+      .banner-logos {
+        .logo-item {
+          width: 150px;
+          height: 72px;
+
+          img {
+            max-width: 104px;
+            max-height: 38px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes moverLogos {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 9px));
+  }
+}
