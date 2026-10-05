@@ -54,6 +54,8 @@ const Hero = () => {
             src="./assets/background.mp4"
             loop
             autoPlay
+            muted
+            playsInline
             className="video"
             type="video/mp4"
           ></video>

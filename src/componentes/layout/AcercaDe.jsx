@@ -62,6 +62,12 @@ const AcercaDe = () => {
               ))}
             </div>
 
+            <ul className="especialidades">
+              {especialidades.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
             <a href="#contacto" className="boton">
               Conversemos
               <span className="icono">
